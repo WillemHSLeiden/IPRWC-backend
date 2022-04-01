@@ -7,7 +7,7 @@ module.exports = function(app) {
     router.get("/:catalog", products.findByCatalog);
     router.delete("/:id", products.delete);
     router.delete("/", products.deleteAll);
-    //router.delete("/:id", products.update)
+    router.put("/:id", products.update);
 
     app.use('/api/products', router);
 };
